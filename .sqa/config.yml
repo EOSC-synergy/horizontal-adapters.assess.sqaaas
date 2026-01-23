@@ -1,0 +1,68 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: main
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/madgeek-arc/horizontal-adapters:
+      branch: main
+      repo: https://github.com/madgeek-arc/horizontal-adapters
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/madgeek-arc/horizontal-adapters git:
+        commands:
+        - /usr/bin/env sh .sqa/script.lanky-lavender-cassowary.sh
+        container: qc.acc_scummy-seashell-rat
+  QC.Doc:
+    repos:
+      github.com/madgeek-arc/horizontal-adapters find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.flimsy-puce-iguana.sh
+        container: qc.doc_foggy-beige-swan
+      github.com/madgeek-arc/horizontal-adapters git:
+        commands:
+        - /usr/bin/env sh .sqa/script.seedy-chocolate-vulture.sh
+        container: qc.doc_messy-copper-retriever
+      github.com/madgeek-arc/horizontal-adapters markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.lovely-peach-dolphin.sh
+        container: qc.doc_woozy-brown-newfoundland
+  QC.Lic:
+    repos:
+      github.com/madgeek-arc/horizontal-adapters licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.sleepy-persimmon-loon.sh
+        container: qc.lic_craggy-heliotrope-cheetah
+  QC.Sec:
+    repos:
+      github.com/madgeek-arc/horizontal-adapters bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.paltry-copper-koala.sh
+        container: qc.sec_bumpy-burgundy-otter
+  QC.Sty:
+    repos:
+      github.com/madgeek-arc/horizontal-adapters checkstyle:
+        commands:
+        - /usr/bin/env sh .sqa/script.blurry-platinum-stoat.sh
+        container: qc.sty_pretty-cream-civet
+      github.com/madgeek-arc/horizontal-adapters flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.lovely-persimmon-bracke.sh
+        container: qc.sty_muzzy-dandelion-wolf
+  QC.Uni:
+    repos:
+      github.com/madgeek-arc/horizontal-adapters pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.cloudy-ochre-urchin.sh
+        container: qc.uni_ready-maroon-moose
+  QC.Ver:
+    repos:
+      github.com/madgeek-arc/horizontal-adapters get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.slaphappy-copper-duck.sh
+        container: qc.ver_muggy-vermilion-dolphin
+timeout: 5400
