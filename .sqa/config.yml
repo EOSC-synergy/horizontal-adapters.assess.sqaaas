@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: feature/pynblint
+      branch: fix/updatego
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/madgeek-arc/horizontal-adapters:
       branch: main
@@ -15,54 +15,54 @@ sqa_criteria:
     repos:
       github.com/madgeek-arc/horizontal-adapters git:
         commands:
-        - /usr/bin/env sh .sqa/script.homey-sepia-mammoth.sh
-        container: qc.acc_freaky-beige-monster
+        - /usr/bin/env sh .sqa/script.purple_sad_flounder.sh
+        container: qc.acc_butter_reserved_echidna
   QC.Doc:
     repos:
       github.com/madgeek-arc/horizontal-adapters find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.snappy-xanthic-olm.sh
-        container: qc.doc_fuzzy-scarlet-vole
+        - /usr/bin/env sh .sqa/script.turmeric_logical_barracuda.sh
+        container: qc.doc_scarlet_studious_cobra
       github.com/madgeek-arc/horizontal-adapters git:
         commands:
-        - /usr/bin/env sh .sqa/script.blurry-crimson-zonkey.sh
-        container: qc.doc_hazy-fuchsia-weasel
+        - /usr/bin/env sh .sqa/script.storm_witty_tapir.sh
+        container: qc.doc_pink_shy_crocodile
       github.com/madgeek-arc/horizontal-adapters markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.lovely-amaranth-sheep.sh
-        container: qc.doc_pokey-buff-neanderthal
+        - /usr/bin/env sh .sqa/script.sepia_shy_elephant.sh
+        container: qc.doc_thistle_rational_caribou
   QC.Lic:
     repos:
       github.com/madgeek-arc/horizontal-adapters licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.crappy-tomato-maltese.sh
-        container: qc.lic_woolly-vermilion-toad
+        - /usr/bin/env sh .sqa/script.rust_mindful_elk.sh
+        container: qc.lic_goldenrod_bold_opossum
   QC.Sec:
     repos:
       github.com/madgeek-arc/horizontal-adapters bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.flimsy-bistre-booby.sh
-        container: qc.sec_tasty-auburn-frigatebird
+        - /usr/bin/env sh .sqa/script.cadet_ambitious_spider.sh
+        container: qc.sec_pistachio_focused_raven
   QC.Sty:
     repos:
       github.com/madgeek-arc/horizontal-adapters checkstyle:
         commands:
-        - /usr/bin/env sh .sqa/script.sloppy-persimmon-monkey.sh
-        container: qc.sty_pokey-myrtle-forest
+        - /usr/bin/env sh .sqa/script.persimmon_organized_whale.sh
+        container: qc.sty_nutmeg_savvy_wildcat
       github.com/madgeek-arc/horizontal-adapters flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.woolly-lilac-slug.sh
-        container: qc.sty_flimsy-copper-dodo
+        - /usr/bin/env sh .sqa/script.aquamarine_zealous_lynx.sh
+        container: qc.sty_lilac_aware_pelican
   QC.Uni:
     repos:
       github.com/madgeek-arc/horizontal-adapters pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.snappy-auburn-chipmunk.sh
-        container: qc.uni_woozy-celadon-flamingo
+        - /usr/bin/env sh .sqa/script.navy_cautious_dormouse.sh
+        container: qc.uni_cornflower_wondrous_dormouse
   QC.Ver:
     repos:
       github.com/madgeek-arc/horizontal-adapters get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.chummy-brass-moose.sh
-        container: qc.ver_scanty-olive-fly
+        - /usr/bin/env sh .sqa/script.cyan_bold_mandrill.sh
+        container: qc.ver_burgundy_flexible_unicorn
 timeout: 5400
